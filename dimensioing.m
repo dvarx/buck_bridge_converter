@@ -10,3 +10,4 @@ dV_buck_in=dQ/C_buck_in;    %keep the voltage drop on the bypass cap of the buck
 loss_tan=15*1e-4;
 Xc=1/(C_buck_in*2*pi*fsw_buck);
 esr=loss_tan*Xc;
+
