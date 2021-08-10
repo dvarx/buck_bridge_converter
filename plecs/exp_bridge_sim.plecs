@@ -62,7 +62,7 @@ Plecs {
   ScriptsDialogSplitterPos "90"
   Schematic {
     Location      [1, 29; 1399, 994]
-    ZoomFactor    1.0579
+    ZoomFactor    1.15222
     SliderPosition [0, 0]
     ShowBrowser   on
     BrowserWidth  70
@@ -330,18 +330,12 @@ Plecs {
       }
       Terminal {
         Type          Output
-        Position      [79, -10]
+        Position      [79, 0]
         Direction     right
         Index         "6"
       }
-      Terminal {
-        Type          Output
-        Position      [79, 0]
-        Direction     right
-        Index         "7"
-      }
       Schematic {
-        Location      [-51, 111; 1297, 806]
+        Location      [201, 209; 1549, 904]
         ZoomFactor    0.999997
         SliderPosition [0, 0]
         ShowBrowser   off
@@ -1038,7 +1032,7 @@ Plecs {
           LabelAlign    down
           Parameter {
             Variable      "pwm"
-            Value         "[1]"
+            Value         "[2]"
             Show          off
           }
           Parameter {
@@ -1443,7 +1437,7 @@ Plecs {
             Direction     left
           }
           Schematic {
-            Location      [446, 400; 1259, 788]
+            Location      [527, 382; 1340, 770]
             ZoomFactor    1
             SliderPosition [0, 0]
             ShowBrowser   off
@@ -1452,7 +1446,7 @@ Plecs {
               Type          Constant
               Name          "bridge_duty"
               Show          on
-              Position      [325, 170]
+              Position      [435, 170]
               Direction     left
               Flipped       off
               Frame         [-25, -10; 25, 10]
@@ -1473,7 +1467,7 @@ Plecs {
               Type          SignalSwitch
               Name          "Switch"
               Show          on
-              Position      [210, 105]
+              Position      [320, 105]
               Direction     left
               Flipped       off
               Parameter {
@@ -1491,7 +1485,7 @@ Plecs {
               Type          Constant
               Name          "zero"
               Show          on
-              Position      [325, 70]
+              Position      [440, 70]
               Direction     left
               Flipped       off
               Frame         [-20, -10; 20, 10]
@@ -1512,7 +1506,7 @@ Plecs {
               Type          Input
               Name          "EN"
               Show          on
-              Position      [210, 225]
+              Position      [320, 225]
               Direction     up
               Flipped       off
               Parameter {
@@ -1530,7 +1524,7 @@ Plecs {
               Type          Output
               Name          "DUTY"
               Show          on
-              Position      [145, 105]
+              Position      [40, 105]
               Direction     right
               Flipped       on
               Parameter {
@@ -1544,11 +1538,164 @@ Plecs {
                 Show          off
               }
             }
+            Component {
+              Type          TransferFunction
+              Name          "Transfer Fcn"
+              Show          on
+              Position      [160, 105]
+              Direction     left
+              Flipped       off
+              Frame         [-30, -15; 30, 15]
+              LabelPosition [0, -18]
+              LabelAlign    down
+              Parameter {
+                Variable      "Numerator"
+                Value         "[1]"
+                Show          off
+              }
+              Parameter {
+                Variable      "Denominator"
+                Value         "[1e-1 1]"
+                Show          off
+              }
+              Parameter {
+                Variable      "X0"
+                Value         "0"
+                Show          off
+              }
+            }
+            Component {
+              Type          Sum
+              Name          "Sum"
+              Show          off
+              Position      [250, 105]
+              Direction     down
+              Flipped       off
+              Parameter {
+                Variable      "IconShape"
+                Value         "2"
+                Show          off
+              }
+              Parameter {
+                Variable      "Inputs"
+                Value         "|+-"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "10"
+                Show          off
+              }
+            }
+            Component {
+              Type          Constant
+              Name          "Constant"
+              Show          on
+              Position      [250, 30]
+              Direction     down
+              Flipped       off
+              Frame         [-10, -20; 10, 20]
+              LabelPosition [-13, 0]
+              LabelAlign    right
+              Parameter {
+                Variable      "Value"
+                Value         "0.5"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "10"
+                Show          off
+              }
+            }
+            Component {
+              Type          Sum
+              Name          "Sum1"
+              Show          off
+              Position      [100, 105]
+              Direction     down
+              Flipped       off
+              Parameter {
+                Variable      "IconShape"
+                Value         "2"
+                Show          off
+              }
+              Parameter {
+                Variable      "Inputs"
+                Value         "|++"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "10"
+                Show          off
+              }
+            }
+            Component {
+              Type          Scope
+              Name          "Scope"
+              Show          on
+              Position      [50, 165]
+              Direction     down
+              Flipped       off
+              Location      [1067, 504; 1417, 727]
+              State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQA"
+"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAAGYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
+"AAAAAA/////wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAA"
+"AAAAAAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAAArwA"
+"AAGRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
+"/8AAAAAAAAAAA=="
+              SavedViews    "AAAAAgAAAAA="
+              HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAA"
+"AAJAAAACQAAAMgAAAAIAAAAyAAAAAUAAADIAAAABAAAAMgAAAAHAAAAyAAAAAYAAADIAAAAAQAAAM"
+"gAAAADAAAAyAAAAAIAAADIAAAA7wAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAs"
+"AAACmAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAA"
+"AAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA"
+"QAAAAAAAABJAAAAAQAAAAAAAAPoAAAAAEk="
+              PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              Axes          "1"
+              TimeRange     "0.0"
+              ScrollingMode "1"
+              SingleTimeAxis "1"
+              Open          "0"
+              Ts            "-1"
+              SampleLimit   "0"
+              XAxisLabel    ""
+              ShowLegend    "1"
+              Axis {
+                Name          ""
+                AutoScale     1
+                MinValue      0
+                MaxValue      1
+                Signals       {}
+                SignalTypes   [ ]
+                Untangle      0
+                KeepBaseline  off
+                BaselineValue 0
+              }
+              Fourier {
+                SingleXAxis       on
+                AxisLabel         "Frequency"
+                Scaling           0
+                PhaseDisplay      0
+                ShowFourierLegend off
+                Axis {
+                  Name          ""
+                  AutoScale     1
+                  MinValue      0
+                  MaxValue      1
+                  Signals       {}
+                  Untangle      0
+                  KeepBaseline  off
+                  BaselineValue 0
+                }
+              }
+            }
             Connection {
               Type          Signal
               SrcComponent  "bridge_duty"
               SrcTerminal   1
-              Points        [270, 170; 270, 110]
+              Points        [380, 170; 380, 110]
               DstComponent  "Switch"
               DstTerminal   2
             }
@@ -1556,7 +1703,7 @@ Plecs {
               Type          Signal
               SrcComponent  "zero"
               SrcTerminal   1
-              Points        [270, 70; 270, 100]
+              Points        [380, 70; 380, 100]
               DstComponent  "Switch"
               DstTerminal   3
             }
@@ -1571,175 +1718,52 @@ Plecs {
               Type          Signal
               SrcComponent  "Switch"
               SrcTerminal   1
-              DstComponent  "DUTY"
+              DstComponent  "Sum"
+              DstTerminal   2
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Sum"
+              SrcTerminal   1
+              DstComponent  "Transfer Fcn"
               DstTerminal   1
             }
-          }
-        }
-        Component {
-          Type          Sum
-          Name          "Sum"
-          Show          off
-          Position      [240, 350]
-          Direction     down
-          Flipped       on
-          Parameter {
-            Variable      "IconShape"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "Inputs"
-            Value         "|-+"
-            Show          off
-          }
-          Parameter {
-            Variable      "DataType"
-            Value         "10"
-            Show          off
-          }
-        }
-        Component {
-          Type          Constant
-          Name          "Constant"
-          Show          on
-          Position      [275, 390]
-          Direction     left
-          Flipped       off
-          Frame         [-10, -10; 10, 10]
-          LabelPosition [0, -13]
-          LabelAlign    down
-          Parameter {
-            Variable      "Value"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "DataType"
-            Value         "10"
-            Show          off
-          }
-        }
-        Component {
-          Type          Reference
-          SrcComponent  "TIC2000_Lib/PWM"
-          Name          "BridgePWM_BLEG"
-          Show          on
-          Position      [105, 395]
-          Direction     down
-          Flipped       off
-          Frame         [-25, -25; 25, 25]
-          LabelPosition [0, -28]
-          LabelAlign    down
-          Parameter {
-            Variable      "pwm"
-            Value         "[1]"
-            Show          off
-          }
-          Parameter {
-            Variable      "type"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "fc"
-            Value         "50e3"
-            Show          off
-          }
-          Parameter {
-            Variable      "fc_tol"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "outmode"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "delay"
-            Value         "0.1e-6"
-            Show          off
-          }
-          Parameter {
-            Variable      "polarity"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "sequence"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "show_enable"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "socsel"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "socsel_prd"
-            Value         ""
-            Show          off
-          }
-          Parameter {
-            Variable      "intsel"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "intsel_prd"
-            Value         ""
-            Show          off
-          }
-          Parameter {
-            Variable      "tz1mode"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "tz2mode"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "tz3mode"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "TargetPortIndices"
-            Value         "9"
-            Show          off
-          }
-          Terminal {
-            Type          Input
-            Position      [-25, 0]
-            Direction     left
-          }
-          Terminal {
-            Type          EventOutput
-            Position      [29, 15]
-            Direction     right
-          }
-          Terminal {
-            Type          EventOutput
-            Position      [29, -15]
-            Direction     right
-          }
-          Terminal {
-            Type          Input
-            Position      [-25, 10]
-            Direction     left
-          }
-          Terminal {
-            Type          Input
-            Position      [-25, -10]
-            Direction     left
+            Connection {
+              Type          Signal
+              SrcComponent  "Transfer Fcn"
+              SrcTerminal   2
+              DstComponent  "Sum1"
+              DstTerminal   2
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Constant"
+              SrcTerminal   1
+              Points        [250, 65]
+              Branch {
+                DstComponent  "Sum"
+                DstTerminal   3
+              }
+              Branch {
+                Points        [100, 65]
+                DstComponent  "Sum1"
+                DstTerminal   3
+              }
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Sum1"
+              SrcTerminal   1
+              Points        [80, 105]
+              Branch {
+                DstComponent  "DUTY"
+                DstTerminal   1
+              }
+              Branch {
+                DstComponent  "Scope"
+                DstTerminal   1
+              }
+            }
           }
         }
         Component {
@@ -1805,7 +1829,7 @@ Plecs {
         Component {
           Type          Reference
           SrcComponent  "TIC2000_Lib/Digital Out"
-          Name          "ENABLELBUCK (J-34)"
+          Name          "ENABLEBRDG (J-34)"
           Show          on
           Position      [615, 605]
           Direction     up
@@ -1820,7 +1844,7 @@ Plecs {
           }
           Parameter {
             Variable      "TargetPortIndices"
-            Value         "10"
+            Value         "9"
             Show          off
           }
           Terminal {
@@ -1902,156 +1926,48 @@ Plecs {
         }
         Connection {
           Type          Signal
-          SrcComponent  "Constant"
-          SrcTerminal   1
-          Points        [240, 390]
-          DstComponent  "Sum"
-          DstTerminal   3
+          SrcComponent  "State Machine"
+          SrcTerminal   2
+          Points        [425, 490]
+          Branch {
+            Points        [425, 415]
+            Branch {
+              Points        [425, 365; 410, 365]
+              Branch {
+                Points        [325, 365]
+                DstComponent  "bridge_duty"
+                DstTerminal   1
+              }
+              Branch {
+                Points        [410, 330]
+                DstComponent  "Scope1"
+                DstTerminal   1
+              }
+            }
+            Branch {
+              Points        [250, 415; 250, 335]
+              DstComponent  "BridgePWM_ALEG"
+              DstTerminal   5
+            }
+          }
+          Branch {
+            Points        [425, 605]
+            DstComponent  "ENABLEBRDG (J-34)"
+            DstTerminal   1
+          }
         }
         Connection {
           Type          Signal
           SrcComponent  "bridge_duty"
           SrcTerminal   2
-          Points        [275, 325]
-          Branch {
-            DstComponent  "BridgePWM_ALEG"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [275, 350]
-            DstComponent  "Sum"
-            DstTerminal   2
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Sum"
-          SrcTerminal   1
-          Points        [195, 350; 195, 395]
-          DstComponent  "BridgePWM_BLEG"
+          DstComponent  "BridgePWM_ALEG"
           DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "State Machine"
-          SrcTerminal   2
-          Points        [425, 490]
-          Branch {
-            Points        [425, 365; 410, 365]
-            Branch {
-              Points        [325, 365]
-              Branch {
-                DstComponent  "bridge_duty"
-                DstTerminal   1
-              }
-              Branch {
-                Points        [325, 405; 175, 405]
-                Branch {
-                  DstComponent  "BridgePWM_BLEG"
-                  DstTerminal   5
-                }
-                Branch {
-                  Points        [175, 335]
-                  DstComponent  "BridgePWM_ALEG"
-                  DstTerminal   5
-                }
-              }
-            }
-            Branch {
-              Points        [410, 330]
-              DstComponent  "Scope1"
-              DstTerminal   1
-            }
-          }
-          Branch {
-            Points        [425, 605]
-            DstComponent  "ENABLELBUCK (J-34)"
-            DstTerminal   1
-          }
         }
         Annotation {
           Name          "Commands:\nTURN_ON_BUCK = 0x01;\nTURN_ON_BRIDGE=0x03;"
 "\nTURN_OFF=0x02;"
           Position      [705, 40]
         } 
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope1"
-      Show          on
-      Position      [120, 480]
-      Direction     up
-      Flipped       off
-      Location      [600, 232; 1920, 1080]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAGYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAAClAAAAZzAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
-"QAAAGQAAAAIAAAAZAAAAAUAAABkAAAABAAAAGQAAAAHAAAAZAAAAAYAAABkAAAAAQAAAGQAAAADAA"
-"AAZAAAAAIAAABkAAAAwwAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAB6AAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"ABJAAAAAQAAAAAAAAPoAAAAAEk="
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    ""
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-      }
-    }
-    Component {
-      Type          From
-      Name          "From"
-      Show          off
-      Position      [70, 480]
-      Direction     right
-      Flipped       off
-      Parameter {
-        Variable      "Tag"
-        Value         "Sw_Hi"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
       }
     }
     Component {
@@ -2327,7 +2243,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux1"
       Show          off
-      Position      [320, 480]
+      Position      [315, 550]
       Direction     left
       Flipped       on
       Parameter {
@@ -2340,7 +2256,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux2"
       Show          off
-      Position      [320, 520]
+      Position      [315, 590]
       Direction     left
       Flipped       on
       Parameter {
@@ -2353,7 +2269,7 @@ Plecs {
       Type          Goto
       Name          "Goto2"
       Show          off
-      Position      [270, 475]
+      Position      [195, 465]
       Direction     left
       Flipped       off
       Parameter {
@@ -2371,7 +2287,7 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [270, 490]
+      Position      [195, 525]
       Direction     left
       Flipped       off
       Parameter {
@@ -2389,7 +2305,7 @@ Plecs {
       Type          Goto
       Name          "Goto4"
       Show          off
-      Position      [270, 515]
+      Position      [205, 595]
       Direction     left
       Flipped       off
       Parameter {
@@ -2407,7 +2323,7 @@ Plecs {
       Type          Goto
       Name          "Goto5"
       Show          off
-      Position      [270, 530]
+      Position      [205, 645]
       Direction     left
       Flipped       off
       Parameter {
@@ -2508,17 +2424,20 @@ Plecs {
       Position      [840, 495]
       Direction     up
       Flipped       off
-      Location      [372, 134; 1291, 773]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAX4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAABy4AAATRAAAA"
+      Location      [62, 48; 1219, 813]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAFoAAAFzfwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAX4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAZLAA"
+"ADnwAAAWgAAADw+wAAAAwAVAByAGEAYwBlAHMBAAAAUgAABc0AAADKAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAAB5oAAAXNAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
+      SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxAAAAAAAAA"
+"ABAFAAAAAAAAAAAAAUAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/"
+"gAAAAAAAAAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"A"
       HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
 "QAAAMgAAAAIAAAAyAAAAAUAAADIAAAABAAAAMgAAAAHAAAAyAAAAAYAAADIAAAAAQAAAMgAAAADAA"
-"AAyAAAAAIAAADIAAABlQAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAFMAAA"
+"AAyAAAAAIAAADIAAABmAAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAFPAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
 "ABJAAAAAQAAAAAAAAPoAAAAAEk="
@@ -2713,10 +2632,10 @@ Plecs {
       Type          Scope
       Name          "bridge_signals"
       Show          on
-      Position      [260, 595]
+      Position      [255, 750]
       Direction     down
       Flipped       off
-      Location      [411, 126; 1395, 798]
+      Location      [326, 188; 1310, 860]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAATgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAAAAAAAAPw"
@@ -2834,6 +2753,96 @@ Plecs {
         }
       }
     }
+    Component {
+      Type          LogicalOperator
+      Name          "Logical\nOperator"
+      Show          on
+      Position      [350, 550]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "Operator"
+        Value         "6"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "ENBLO"
+      Show          on
+      Position      [240, 645]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "Operator"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "ENBHI"
+      Show          on
+      Position      [240, 595]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "Operator"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "ENALO"
+      Show          on
+      Position      [240, 525]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "Operator"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "ENALO1"
+      Show          on
+      Position      [240, 465]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "Operator"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "L1"
@@ -2875,13 +2884,6 @@ Plecs {
       SrcComponent  "R3"
       SrcTerminal   2
       DstComponent  "Cout"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From"
-      SrcTerminal   1
-      DstComponent  "Scope1"
       DstTerminal   1
     }
     Connection {
@@ -3033,22 +3035,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Controller"
-      SrcTerminal   9
-      Points        [355, 420; 355, 480]
-      DstComponent  "Demux1"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Controller"
-      SrcTerminal   8
-      Points        [385, 430; 385, 520]
-      DstComponent  "Demux2"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
       DstComponent  "FETD3"
@@ -3132,30 +3118,52 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Demux2"
-      SrcTerminal   2
-      Points        [305, 525; 305, 530; 290, 530]
-      Branch {
-        DstComponent  "Goto5"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "bridge_signals"
-        DstTerminal   4
-      }
+      SrcComponent  "Logical\nOperator"
+      SrcTerminal   1
+      DstComponent  "Demux1"
+      DstTerminal   1
     }
     Connection {
       Type          Signal
-      SrcComponent  "Demux2"
+      SrcComponent  "ENBLO"
+      SrcTerminal   1
+      DstComponent  "Goto5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "ENBHI"
+      SrcTerminal   1
+      DstComponent  "Goto4"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "ENALO"
+      SrcTerminal   1
+      DstComponent  "Goto3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "ENALO1"
+      SrcTerminal   1
+      DstComponent  "Goto2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux1"
       SrcTerminal   3
-      Points        [295, 515]
+      Points        [305, 545]
       Branch {
-        DstComponent  "Goto4"
+        Points        [305, 765]
+        DstComponent  "bridge_signals"
         DstTerminal   1
       }
       Branch {
-        Points        [295, 590]
-        DstComponent  "bridge_signals"
+        Points        [305, 460]
+        DstComponent  "ENALO1"
         DstTerminal   3
       }
     }
@@ -3163,30 +3171,90 @@ Plecs {
       Type          Signal
       SrcComponent  "Demux1"
       SrcTerminal   2
-      Points        [305, 485; 305, 490; 300, 490]
+      Points        [300, 555]
       Branch {
-        DstComponent  "Goto3"
+        Points        [300, 560; 295, 560; 295, 755]
+        DstComponent  "bridge_signals"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [295, 555; 295, 520]
+        DstComponent  "ENALO"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux2"
+      SrcTerminal   3
+      Points        [290, 585]
+      Branch {
+        Points        [290, 745]
+        DstComponent  "bridge_signals"
+        DstTerminal   3
+      }
+      Branch {
+        Points        [290, 590]
+        DstComponent  "ENBHI"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux2"
+      SrcTerminal   2
+      Points        [300, 595; 300, 600; 285, 600; 285, 640]
+      Branch {
+        DstComponent  "bridge_signals"
+        DstTerminal   4
+      }
+      Branch {
+        DstComponent  "ENBLO"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Controller"
+      SrcTerminal   8
+      Points        [385, 430; 385, 550]
+      Branch {
+        Points        [385, 590]
+        DstComponent  "Demux2"
         DstTerminal   1
       }
       Branch {
-        Points        [300, 600]
-        DstComponent  "bridge_signals"
+        DstComponent  "Logical\nOperator"
         DstTerminal   2
       }
     }
     Connection {
       Type          Signal
-      SrcComponent  "Demux1"
-      SrcTerminal   3
-      Points        [310, 475]
+      SrcComponent  "Controller"
+      SrcTerminal   9
+      Points        [355, 410; 355, 440; 275, 440; 275, 470]
       Branch {
-        DstComponent  "Goto2"
-        DstTerminal   1
+        Points        [275, 530]
+        Branch {
+          Points        [275, 600]
+          Branch {
+            Points        [275, 650]
+            DstComponent  "ENBLO"
+            DstTerminal   2
+          }
+          Branch {
+            DstComponent  "ENBHI"
+            DstTerminal   2
+          }
+        }
+        Branch {
+          DstComponent  "ENALO"
+          DstTerminal   2
+        }
       }
       Branch {
-        Points        [310, 610]
-        DstComponent  "bridge_signals"
-        DstTerminal   1
+        DstComponent  "ENALO1"
+        DstTerminal   2
       }
     }
     Annotation {
