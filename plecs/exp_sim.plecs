@@ -61,9 +61,9 @@ Plecs {
   ScriptsDialogGeometry "[1084 579 1011 537]"
   ScriptsDialogSplitterPos "100"
   Schematic {
-    Location      [3, 31; 1281, 1350]
-    ZoomFactor    1.49863
-    SliderPosition [0, 0]
+    Location      [1, 29; 959, 998]
+    ZoomFactor    1.21063
+    SliderPosition [30, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -75,7 +75,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "R"
-        Value         "20"
+        Value         "50"
         Show          on
       }
     }
@@ -264,14 +264,14 @@ Plecs {
     }
     Component {
       Type          Subsystem
-      Name          "Sub"
+      Name          "Controller"
       Show          on
-      Position      [360, 390]
+      Position      [455, 410]
       Direction     down
       Flipped       off
-      Frame         [-20, -20; 20, 20]
-      LabelPosition [-23, -23]
-      LabelAlign    bottomright
+      Frame         [-75, -40; 75, 40]
+      LabelPosition [0, -43]
+      LabelAlign    down
       TreatAsAtomicUnit on
       SampleTime    "-1"
       TaskingMode "1"
@@ -284,26 +284,68 @@ Plecs {
 "BjAAAAAgAxAAAAGAB1AG4AaQBmAGwAYQBzAGgARgBpAGwAZQAAAAAAAAAWAHQAYQBzAGsARgByAGU"
 "AcQBUAG8AbAAAAAIAMQAAABIAcwB5AHMAQwBsAGsATQBIAHoAAAAGADEAOQAwAAAAFABpAG4AcwB0"
 "AGEAbABsAEQAaQByAAAAAAAAAA4AZwBlAG4ATwBuAGwAeQAAAAIAMgAAABwAZQB4AHQATQBvAGQAZ"
-"QBTAGMAaQBQAGkAbgBzAAAAEABbADgANQAsACAAOAA0AF0AAAAiAGUAeAB0AE0AbwBkAGUAQgB1AG"
-"YAZgBlAHIAUwBpAHoAZQAAAAgAMQAwADAAMAAAABIAZQB4AHQAQwBsAGsATQBIAHoAAAAEADMAMAA"
-"AAAgAYwBoAGkAcAAAAAIAMQAAABYAYgB1AGkAbABkAEMAbwBuAGYAaQBnAAAAAgAyAAAACgBiAG8A"
-"YQByAGQAAAACADIAAAAaAFQAQQBSAEcARQBUAF8ARABFAFYASQBDAEX/////AAAAIgBMAGkAbgBrA"
-"GUAcgBDAG8AbQBtAGEAbgBkAEYAaQBsAGUAAAAAAAAAGgBFAFgAVABFAFIATgBBAEwAXwBNAE8ARA"
-"BFAAAAAgAw"
+"QBTAGMAaQBQAGkAbgBzAAAADgBbADQAMwAsADQAMgBdAAAAIgBlAHgAdABNAG8AZABlAEIAdQBmAG"
+"YAZQByAFMAaQB6AGUAAAAIADEAMAAwADAAAAASAGUAeAB0AEMAbABrAE0ASAB6AAAABAAzADAAAAA"
+"IAGMAaABpAHAAAAACADEAAAAWAGIAdQBpAGwAZABDAG8AbgBmAGkAZwAAAAIAMgAAAAoAYgBvAGEA"
+"cgBkAAAAAgAyAAAAGgBUAEEAUgBHAEUAVABfAEQARQBWAEkAQwBFAAAAFAAwAHwAQwBPAE0AOQB8A"
+"DAAfAAwAAAAIgBMAGkAbgBrAGUAcgBDAG8AbQBtAGEAbgBkAEYAaQBsAGUAAAAAAAAAGgBFAFgAVA"
+"BFAFIATgBBAEwAXwBNAE8ARABFAAAAAgAx"
       CodeGenFloatingPointFormat "1"
+      ExternalModeSettings "AAAAfwAAAAAWUU1hcDxRU3RyaW5nLFFTdHJpbmc+AAAAAAcAAA"
+"AYAFQAcgBpAGcAZwBlAHIAVgBhAGwAdQBlAAAAAgAwAAAAGABUAHIAaQBnAGcAZQByAEQAZQBsAGE"
+"AeQAAAAIAMAAAABwAVAByAGkAZwBnAGUAcgBDAGgAYQBuAG4AZQBsAAAABAAtADEAAAAWAFMAZQBu"
+"AHMAaQB0AGkAdgBpAHQAeQAAAAIAMAAAABYAUgBlAGYAcgBlAHMAaABSAGEAdABlAAAABAAyADAAA"
+"AAUAE4AdQBtAFMAYQBtAHAAbABlAHMAAAAIADgAMQA5ADIAAAAUAEQAZQBjAGkAbQBhAHQAaQBvAG"
+"4AAAACADE="
       MaskDisplayLang "2"
       MaskIconFrame on
       MaskIconOpaque off
       MaskIconRotates on
       Terminal {
         Type          Output
-        Position      [24, -10]
+        Position      [79, 10]
         Direction     right
         Index         "1"
       }
+      Terminal {
+        Type          Input
+        Position      [-75, 10]
+        Direction     left
+        Index         "1"
+      }
+      Terminal {
+        Type          Output
+        Position      [79, 20]
+        Direction     right
+        Index         "2"
+      }
+      Terminal {
+        Type          Input
+        Position      [-75, 20]
+        Direction     left
+        Index         "2"
+      }
+      Terminal {
+        Type          Input
+        Position      [-75, 30]
+        Direction     left
+        Index         "3"
+      }
+      Terminal {
+        Type          Output
+        Position      [71, 30]
+        Direction     left
+        Index         "3"
+      }
+      Terminal {
+        Type          Output
+        Position      [79, -30]
+        Direction     right
+        Index         "4"
+      }
       Schematic {
-        Location      [435, 451; 1449, 1113]
-        ZoomFactor    1.71498
+        Location      [39, 190; 958, 889]
+        ZoomFactor    1.30957
         SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
@@ -311,7 +353,7 @@ Plecs {
           Type          Constant
           Name          "Constant"
           Show          on
-          Position      [500, 90]
+          Position      [595, 155]
           Direction     left
           Flipped       off
           Frame         [-25, -10; 25, 10]
@@ -358,7 +400,7 @@ Plecs {
           Type          PulseGenerator
           Name          "Pulse\nGenerator"
           Show          on
-          Position      [500, 180]
+          Position      [595, 245]
           Direction     left
           Flipped       off
           Parameter {
@@ -396,7 +438,7 @@ Plecs {
           Type          Gain
           Name          "Gain"
           Show          on
-          Position      [390, 130]
+          Position      [485, 195]
           Direction     left
           Flipped       off
           Parameter {
@@ -419,7 +461,7 @@ Plecs {
           Type          Sum
           Name          "Sum"
           Show          off
-          Position      [435, 130]
+          Position      [530, 195]
           Direction     down
           Flipped       off
           Parameter {
@@ -443,7 +485,7 @@ Plecs {
           SrcComponent  "TIC2000_Lib/PWM"
           Name          "PWM"
           Show          on
-          Position      [175, 130]
+          Position      [135, 130]
           Direction     down
           Flipped       off
           Frame         [-25, -25; 25, 25]
@@ -564,26 +606,28 @@ Plecs {
           Type          Scope
           Name          "Scope"
           Show          on
-          Position      [270, 195]
+          Position      [295, 220]
           Direction     up
           Flipped       off
-          Location      [960, 460; 1310, 687]
+          Location      [56, 183; 638, 688]
           State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
-"wBvAG0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
-"AA/////wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAA"
-"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAV4AAADI"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAAPIA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAAAAAA"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAABIwAAAPF"
 "AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
 "AAAAAAAAA=="
           SavedViews    "AAAAAgAAAAA="
           HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJA"
-"AAABwAAAGQAAAAGAAAAZAAAAAUAAABkAAAABAAAAGQAAAAJAAAAZAAAAAgAAABkAAAAAwAAAGQAAA"
-"ACAAAAZAAAAAEAAABkAAAAZAAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAB"
-"AAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAA"
+"AAAAwAAAGQAAAAIAAAAZAAAAAkAAABkAAAABAAAAGQAAAAFAAAAZAAAAAYAAABkAAAABwAAAGQAAA"
+"ABAAAAZAAAAAIAAABkAAABLAAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAD"
+"jAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAA"
 "AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAA"
-"AAAAAAkAAAAAQAAAAAAAAPoAAAAACQ="
-          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-          Axes          "1"
-          TimeRange     "0.0"
+"AAAAABJAAAAAQAAAAAAAAPoAAAAAEk="
+          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"QAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"AAAA=="
+          Axes          "3"
+          TimeRange     "0"
           ScrollingMode "1"
           SingleTimeAxis "1"
           Open          "0"
@@ -591,6 +635,28 @@ Plecs {
           SampleLimit   "0"
           XAxisLabel    ""
           ShowLegend    "1"
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
           Axis {
             Name          ""
             AutoScale     1
@@ -618,28 +684,424 @@ Plecs {
               KeepBaseline  off
               BaselineValue 0
             }
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "TIC2000_Lib/SPI/SPI Slave"
+          Name          "SPI Slave"
+          Show          on
+          Position      [230, 340]
+          Direction     up
+          Flipped       off
+          Frame         [-25, -30; 25, 30]
+          LabelPosition [0, 33]
+          LabelAlign    up
+          Parameter {
+            Variable      "spi"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "charlen"
+            Value         "8"
+            Show          off
+          }
+          Parameter {
+            Variable      "mode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "dim"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "pinset"
+            Value         "[58,59,60,61]"
+            Show          off
+          }
+          Parameter {
+            Variable      "offlineSimulation"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "2 3 4 5"
+            Show          off
+          }
+          Terminal {
+            Type          Output
+            Position      [29, 20]
+            Direction     right
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 20]
+            Direction     left
+          }
+          Terminal {
+            Type          Output
+            Position      [29, -20]
+            Direction     right
+          }
+          Terminal {
+            Type          Output
+            Position      [29, -10]
+            Direction     right
+          }
+        }
+        Component {
+          Type          FsmBlock
+          Name          "State Machine"
+          Show          on
+          Position      [385, 340]
+          Direction     up
+          Flipped       off
+          Frame         [-35, -15; 35, 15]
+          LabelPosition [0, 18]
+          LabelAlign    up
+          Parameter {
+            Variable      "InputVariables"
+            Value         "cmd"
+            Show          off
+          }
+          Parameter {
+            Variable      "InputTypes"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "InternalConstants"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "InternalConstantValues"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "InternalVariables"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "InternalVariableValues"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "OutputVariables"
+            Value         "y"
+            Show          off
+          }
+          Parameter {
+            Variable      "Declarations"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "TransitionOrder"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "SampleTime"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "Animate"
+            Value         "1"
+            Show          off
+          }
+          FSM {
+            Location       [1539, 380; 3351, 1618]
+            ZoomFactor     1
+            SliderPosition [0, 0]
+            FsmState {
+              Name          "OFF"
+              Position      [240, 230]
+              Frame         [-90, -60; 90, 60]
+              Parameter {
+                Name     "EnterAction"
+                Value    "/* enter action */"
+              }
+              Parameter {
+                Name     "DuringAction"
+                Value    "y=0;\n"
+              }
+              Parameter {
+                Name     "ExitAction"
+                Value    ""
+              }
+            }
+            FsmState {
+              Name          "ON"
+              Position      [680, 220]
+              Frame         [-90, -60; 90, 60]
+              Parameter {
+                Name     "EnterAction"
+                Value    "/* enter action */"
+              }
+              Parameter {
+                Name     "DuringAction"
+                Value    "y=1;\n"
+              }
+              Parameter {
+                Name     "ExitAction"
+                Value    ""
+              }
+            }
+            FsmState {
+              Name          ".PointState"
+              Position      [230, 130]
+            }
+            FsmTransition {
+              FsmSrcInfo {
+                StatePath        "OFF"
+                TerminalLoc      right
+                TerminalCoord    0.125
+                External         on
+              }
+              FsmDstInfo {
+                StatePath        "ON"
+                TerminalLoc      left
+                TerminalCoord    0.197115
+                External         on
+              }
+              SegmentLengths      []
+              LabelPosition       0.5
+              Parameter {
+                Name     "Trigger"
+                Value    ""
+              }
+              Parameter {
+                Name     "Condition"
+                Value    "cmd==1"
+              }
+              Parameter {
+                Name     "Action"
+                Value    ""
+              }
+              Parameter {
+                Name     "Priority"
+                Value    "1"
+              }
+            }
+            FsmTransition {
+              FsmSrcInfo {
+                StatePath        "ON"
+                TerminalLoc      left
+                TerminalCoord    0.841346
+                External         on
+              }
+              FsmDstInfo {
+                StatePath        "OFF"
+                TerminalLoc      right
+                TerminalCoord    0.697115
+                External         on
+              }
+              SegmentLengths      [-126.5]
+              LabelPosition       0.5
+              Parameter {
+                Name     "Trigger"
+                Value    ""
+              }
+              Parameter {
+                Name     "Condition"
+                Value    "cmd==2"
+              }
+              Parameter {
+                Name     "Action"
+                Value    ""
+              }
+              Parameter {
+                Name     "Priority"
+                Value    "1"
+              }
+            }
+            FsmTransition {
+              FsmSrcInfo {
+                StatePath        ".PointState"
+                TerminalLoc      bottom
+                TerminalCoord    0.5
+                External         on
+              }
+              FsmDstInfo {
+                StatePath        "OFF"
+                TerminalLoc      top
+                TerminalCoord    0.545732
+                External         on
+              }
+              SegmentLengths      [15,8.75,-3]
+              LabelPosition       0.5
+              Parameter {
+                Name     "Trigger"
+                Value    ""
+              }
+              Parameter {
+                Name     "Condition"
+                Value    ""
+              }
+              Parameter {
+                Name     "Action"
+                Value    ""
+              }
+              Parameter {
+                Name     "Priority"
+                Value    "1"
+              }
+            }
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "TIC2000_Lib/Digital Out"
+          Name          "STATUS"
+          Show          on
+          Position      [615, 340]
+          Direction     up
+          Flipped       off
+          Frame         [-25, -20; 25, 20]
+          LabelPosition [0, 23]
+          LabelAlign    up
+          Parameter {
+            Variable      "gpio"
+            Value         "31"
+            Show          on
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "6"
+            Show          off
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 0]
+            Direction     left
+          }
+        }
+        Component {
+          Type          LogicalOperator
+          Name          "Logical\nOperator"
+          Show          on
+          Position      [490, 340]
+          Direction     up
+          Flipped       off
+          Parameter {
+            Variable      "Operator"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "Inputs"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalSwitch
+          Name          "Switch"
+          Show          on
+          Position      [380, 130]
+          Direction     left
+          Flipped       off
+          Parameter {
+            Variable      "Criteria"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Threshold"
+            Value         "0.5"
+            Show          on
+          }
+        }
+        Component {
+          Type          Constant
+          Name          "Constant1"
+          Show          on
+          Position      [480, 95]
+          Direction     left
+          Flipped       off
+          Frame         [-10, -10; 10, 10]
+          LabelPosition [0, -13]
+          LabelAlign    down
+          Parameter {
+            Variable      "Value"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "TIC2000_Lib/Digital Out"
+          Name          "ENABLE (J-33)"
+          Show          on
+          Position      [615, 425]
+          Direction     up
+          Flipped       off
+          Frame         [-25, -20; 25, 20]
+          LabelPosition [0, 23]
+          LabelAlign    up
+          Parameter {
+            Variable      "gpio"
+            Value         "16"
+            Show          on
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "7"
+            Show          off
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 0]
+            Direction     left
           }
         }
         Connection {
           Type          Signal
           SrcComponent  "Constant"
           SrcTerminal   1
-          Points        [435, 90]
+          Points        [530, 155]
           DstComponent  "Sum"
           DstTerminal   3
         }
         Connection {
           Type          Signal
-          SrcComponent  "Gain"
-          SrcTerminal   2
-          DstComponent  "Transfer Fcn"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
           SrcComponent  "Pulse\nGenerator"
           SrcTerminal   1
-          Points        [470, 180; 470, 130]
+          Points        [565, 245; 565, 195]
           DstComponent  "Sum"
           DstTerminal   2
         }
@@ -652,6 +1114,58 @@ Plecs {
         }
         Connection {
           Type          Signal
+          SrcComponent  "SPI Slave"
+          SrcTerminal   1
+          Points        [300, 360; 300, 340]
+          DstComponent  "State Machine"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Constant1"
+          SrcTerminal   1
+          Points        [440, 95; 440, 125]
+          DstComponent  "Switch"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "State Machine"
+          SrcTerminal   1
+          Points        [450, 340]
+          Branch {
+            DstComponent  "Logical\nOperator"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [450, 270]
+            Branch {
+              Points        [450, 235; 380, 235]
+              DstComponent  "Switch"
+              DstTerminal   4
+            }
+            Branch {
+              Points        [265, 270; 265, 230]
+              DstComponent  "Scope"
+              DstTerminal   3
+            }
+          }
+          Branch {
+            Points        [450, 425]
+            DstComponent  "ENABLE (J-33)"
+            DstTerminal   1
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Gain"
+          SrcTerminal   2
+          Points        [440, 195; 440, 135]
+          DstComponent  "Switch"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
           SrcComponent  "Transfer Fcn"
           SrcTerminal   2
           Points        [220, 130]
@@ -660,10 +1174,32 @@ Plecs {
             DstTerminal   1
           }
           Branch {
-            Points        [220, 195]
+            Points        [220, 210]
             DstComponent  "Scope"
             DstTerminal   1
           }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Switch"
+          SrcTerminal   1
+          Points        [340, 130]
+          Branch {
+            DstComponent  "Transfer Fcn"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [340, 165; 240, 165; 240, 220]
+            DstComponent  "Scope"
+            DstTerminal   2
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Logical\nOperator"
+          SrcTerminal   1
+          DstComponent  "STATUS"
+          DstTerminal   1
         }
       }
     }
@@ -674,20 +1210,20 @@ Plecs {
       Position      [785, 140]
       Direction     up
       Flipped       off
-      Location      [863, 265; 1880, 1241]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAA/kAAAO1AAAA"
+      Location      [491, 271; 1406, 887]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAFoAAAEo/wCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMBAAAAUgAABKMAAADKAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAABbYAAASjAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
-"wAAAGQAAAAGAAAAZAAAAAUAAABkAAAABAAAAGQAAAAJAAAAZAAAAAgAAABkAAAAAwAAAGQAAAACAA"
-"AAZAAAAAEAAABkAAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAC0AAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
+"wAAAGQAAAAIAAAAZAAAAAkAAABkAAAABAAAAGQAAAAFAAAAZAAAAAYAAABkAAAABwAAAGQAAAABAA"
+"AAZAAAAAIAAABkAAABmAAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAFPAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AAkAAAAAQAAAAAAAAPoAAAAACQ="
+"ABJAAAAAQAAAAAAAAPoAAAAAEk="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
@@ -700,19 +1236,18 @@ Plecs {
       XAxisLabel    ""
       ShowLegend    "1"
       Axis {
-        Name          "x"
+        Name          "inductor current"
         AutoScale     1
         MinValue      0
         MaxValue      1
         Signals       {}
         SignalTypes   [ ]
-        AxisLabel     "x"
         Untangle      0
         KeepBaseline  off
         BaselineValue 0
       }
       Axis {
-        Name          ""
+        Name          "capacitor voltage"
         AutoScale     1
         MinValue      0
         MaxValue      1
@@ -959,7 +1494,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Sub"
+      SrcComponent  "Controller"
       SrcTerminal   1
       Points        [315, 400; 315, 380]
       DstComponent  "Demux"
