@@ -249,6 +249,9 @@ Plecs {
       CodeGenEnable on
       CodeGenSampleTime "50e-6"
       CodeGenDiscretizationMethod "2"
+      CodeGenInliningExceptions "AAAACwAAAAACAAAAPgBiAHIAaQBkAGcAZQBfAGQAdQB0A"
+"HkALwBNAGEAbgB1AGEAbAAgAFMAdwBpAHQAYwBoACAAKABEAEIARwApAAAAKgBiAHIAaQBkAGcAZQ"
+"BfAGQAdQB0AHkALwBDAG8AbgBzAHQAYQBuAHQAMQ=="
       CodeGenTarget "TI2837xS"
       CodeGenTargetSettings "AAAAfwAAAAAlUU1hcDxRU3RyaW5nLFFNYXA8UVN0cmluZyxRU"
 "3RyaW5nPiA+AAAAAAEAAAAQAFQASQAyADgAMwA3AHgAUwAAAA8AAAASAHUAcwBlAEkAbgB0AE8Acw"
@@ -607,10 +610,10 @@ Plecs {
           Type          FsmBlock
           Name          "State Machine"
           Show          on
-          Position      [245, 485]
+          Position      [260, 485]
           Direction     up
           Flipped       off
-          Frame         [-60, -25; 60, 25]
+          Frame         [-75, -25; 75, 25]
           LabelPosition [0, 28]
           LabelAlign    up
           Parameter {
@@ -655,9 +658,7 @@ Plecs {
 "unsigned int TURN_ON_BUCK = 0x0001;\n"
 "unsigned int TURN_ON_BRIDGE_DC=0x0003;\n"
 "unsigned int TURN_OFF=0x0002;\n"
-"unsigned int TURN_ON_BRIDGE_AC=0x0004;\n"
-"\n"
-"uint8_t extracted_duty=0;"
+"unsigned int TURN_ON_BRIDGE_AC=0x0004;"
             Show          off
           }
           Parameter {
@@ -1525,7 +1526,7 @@ Plecs {
               Type          Constant
               Name          "zero"
               Show          on
-              Position      [440, 70]
+              Position      [505, 70]
               Direction     left
               Flipped       off
               Frame         [-20, -10; 20, 10]
@@ -1546,7 +1547,7 @@ Plecs {
               Type          Input
               Name          "EN"
               Show          on
-              Position      [320, 225]
+              Position      [320, 280]
               Direction     up
               Flipped       off
               Parameter {
@@ -1687,8 +1688,8 @@ Plecs {
 "/8AAAAAAAAAAA=="
               SavedViews    "AAAAAgAAAAA="
               HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAA"
-"AAJAAAABwAAAMgAAAABAAAAyAAAAAIAAADIAAAAAwAAAMgAAAAIAAAAyAAAAAkAAADIAAAABAAAAM"
-"gAAAAFAAAAyAAAAAYAAADIAAAAygAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAs"
+"AAJAAAAAgAAAMgAAAAFAAAAyAAAAAQAAADIAAAABwAAAMgAAAAGAAAAyAAAAAkAAADIAAAACAAAAM"
+"gAAAABAAAAyAAAAAMAAADIAAAAygAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAs"
 "AAACmAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAA"
 "AAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA"
 "QAAAAAAAAAkAAAAAQAAAAAAAAPoAAAAACQ="
@@ -1735,7 +1736,7 @@ Plecs {
               Type          Input
               Name          "DES_DUTY"
               Show          on
-              Position      [410, 225]
+              Position      [475, 280]
               Direction     up
               Flipped       off
               Parameter {
@@ -1746,6 +1747,40 @@ Plecs {
               Parameter {
                 Variable      "Width"
                 Value         "-1"
+                Show          off
+              }
+            }
+            Component {
+              Type          ManualSignalSwitch
+              Name          "Manual Switch (DBG)"
+              Show          on
+              Position      [470, 210]
+              Direction     up
+              Flipped       off
+              Parameter {
+                Variable      "SwitchState"
+                Value         "1"
+                Show          off
+              }
+            }
+            Component {
+              Type          Constant
+              Name          "Constant1"
+              Show          on
+              Position      [395, 245]
+              Direction     right
+              Flipped       off
+              Frame         [-15, -10; 15, 10]
+              LabelPosition [0, 13]
+              LabelAlign    up
+              Parameter {
+                Variable      "Value"
+                Value         "0.5"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "10"
                 Show          off
               }
             }
@@ -1818,8 +1853,23 @@ Plecs {
               Type          Signal
               SrcComponent  "DES_DUTY"
               SrcTerminal   1
-              Points        [410, 170; 380, 170; 380, 110]
+              DstComponent  "Manual Switch (DBG)"
+              DstTerminal   3
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Manual Switch (DBG)"
+              SrcTerminal   1
+              Points        [470, 110]
               DstComponent  "Switch"
+              DstTerminal   2
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Constant1"
+              SrcTerminal   1
+              Points        [465, 245]
+              DstComponent  "Manual Switch (DBG)"
               DstTerminal   2
             }
           }
@@ -1911,7 +1961,7 @@ Plecs {
           Type          Goto
           Name          "Goto"
           Show          off
-          Position      [335, 460]
+          Position      [365, 460]
           Direction     right
           Flipped       off
           Parameter {
@@ -1929,7 +1979,7 @@ Plecs {
           Type          Goto
           Name          "Goto1"
           Show          off
-          Position      [335, 475]
+          Position      [365, 475]
           Direction     right
           Flipped       off
           Parameter {
@@ -1947,7 +1997,7 @@ Plecs {
           Type          Goto
           Name          "Goto2"
           Show          off
-          Position      [335, 490]
+          Position      [365, 490]
           Direction     right
           Flipped       off
           Parameter {
@@ -1965,7 +2015,7 @@ Plecs {
           Type          Goto
           Name          "Goto3"
           Show          off
-          Position      [335, 505]
+          Position      [365, 505]
           Direction     right
           Flipped       off
           Parameter {
@@ -2126,7 +2176,7 @@ Plecs {
           Type          Signal
           SrcComponent  "State Machine"
           SrcTerminal   1
-          Points        [315, 470]
+          Points        [340, 460]
           DstComponent  "Goto"
           DstTerminal   1
         }
@@ -2134,7 +2184,7 @@ Plecs {
           Type          Signal
           SrcComponent  "State Machine"
           SrcTerminal   2
-          Points        [310, 475]
+          Points        [345, 480]
           DstComponent  "Goto1"
           DstTerminal   1
         }
@@ -2149,7 +2199,7 @@ Plecs {
           Type          Signal
           SrcComponent  "State Machine"
           SrcTerminal   4
-          Points        [315, 500]
+          Points        [345, 500]
           DstComponent  "Goto3"
           DstTerminal   1
         }
@@ -2230,7 +2280,7 @@ Plecs {
         Annotation {
           Name          "Commands:\nTURN_ON_BUCK = 0x0001;\nTURN_ON_BRIDGE_DC="
 "0x0003;\nTURN_OFF=0x0002;\nTURN_ON_BRIDGE_AC=0x0004;\nSet DC duty: 0xXX05 whe"
-"re XX determine the duty (uint8_t)"
+"re XX determine the dut"
           Position      [710, 65]
         } 
       }
@@ -2693,7 +2743,7 @@ Plecs {
       Position      [840, 495]
       Direction     up
       Flipped       off
-      Location      [2560, 23; 4480, 1020]
+      Location      [640, 27; 2560, 1024]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAFoAAADyvwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAPwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAZLAA"
 "ADnwAAAWgAAADw+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAA8oAAABmAP///wAAAAMAAA8AAAACAPw"
@@ -2722,7 +2772,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
