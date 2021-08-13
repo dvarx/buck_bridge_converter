@@ -3,7 +3,7 @@ Plecs {
   Version       "4.5"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "5"
+  TimeSpan      "4"
   Timeout       ""
   Solver        "dopri"
   MaxStep       "1e-4"
@@ -331,8 +331,8 @@ Plecs {
       }
       Schematic {
         Location      [614, 144; 2315, 1161]
-        ZoomFactor    1.71497
-        SliderPosition [0, 0]
+        ZoomFactor    1.96256
+        SliderPosition [0, 125]
         ShowBrowser   off
         BrowserWidth  100
         Component {
@@ -613,8 +613,8 @@ Plecs {
           Position      [260, 485]
           Direction     up
           Flipped       off
-          Frame         [-75, -25; 75, 25]
-          LabelPosition [0, 28]
+          Frame         [-75, -30; 75, 30]
+          LabelPosition [0, 33]
           LabelAlign    up
           Parameter {
             Variable      "InputVariables"
@@ -648,7 +648,7 @@ Plecs {
           }
           Parameter {
             Variable      "OutputVariables"
-            Value         "buck_en,state,des_duty,bridge_en"
+            Value         "buck_en,buck_duty,state,des_duty,bridge_en"
             Show          off
           }
           Parameter {
@@ -703,11 +703,13 @@ Plecs {
               Frame         [-100, -90; 100, 90]
               Parameter {
                 Name     "EnterAction"
-                Value    ""
+                Value    "buck_duty=0.5;\n"
               }
               Parameter {
                 Name     "DuringAction"
-                Value    "buck_en=1;\nbridge_en=0;\nstate=2;"
+                Value    "buck_en=1;\nbridge_en=0;\nstate=2;\n\nif(((uint16_t)"
+"(cmd)&(uint16_t)(0x00FF))==0x0006){\n\tbuck_duty=(float)(((uint16_t)(cmd))>>8"
+")/256.0;\n}"
               }
               Parameter {
                 Name     "ExitAction"
@@ -728,7 +730,9 @@ Plecs {
               }
               Parameter {
                 Name     "DuringAction"
-                Value    "buck_en=1;\nbridge_en=1;\nstate=3;"
+                Value    "buck_en=1;\nbridge_en=1;\nstate=3;\n\nif(((uint16_t)"
+"(cmd)&(uint16_t)(0x00FF))==0x0006){\n\tbuck_duty=(float)(((uint16_t)(cmd))>>8"
+")/256.0;\n}"
               }
               Parameter {
                 Name     "ExitAction"
@@ -746,8 +750,9 @@ Plecs {
               Parameter {
                 Name     "DuringAction"
                 Value    "buck_en=1;\nbridge_en=1;\nstate=4;\n\nif(((uint16_t)"
-"(cmd)&(uint16_t)(0x00FF))==0x0005){\n\tdes_duty=(float)(((uint16_t)(cmd))>>8)"
-"/256.0;\n}"
+"(cmd)&(uint16_t)(0x00FF))==0x0006){\n\tbuck_duty=(float)(((uint16_t)(cmd))>>8"
+")/256.0;\n}\n\nif(((uint16_t)(cmd)&(uint16_t)(0x00FF))==0x0005){\n\tdes_duty="
+"(float)(((uint16_t)(cmd))>>8)/256.0;\n}"
               }
               Parameter {
                 Name     "ExitAction"
@@ -1178,10 +1183,10 @@ Plecs {
           Type          Subsystem
           Name          "buck_duty"
           Show          on
-          Position      [450, 130]
+          Position      [430, 135]
           Direction     up
           Flipped       off
-          Frame         [-20, -20; 20, 20]
+          Frame         [-40, -20; 40, 20]
           LabelPosition [0, -23]
           LabelAlign    down
           SampleTime    "-1"
@@ -1193,41 +1198,25 @@ Plecs {
           MaskIconRotates on
           Terminal {
             Type          Input
-            Position      [0, 20]
+            Position      [20, 20]
             Direction     down
           }
           Terminal {
             Type          Output
-            Position      [-24, 0]
+            Position      [-44, 0]
+            Direction     left
+          }
+          Terminal {
+            Type          Input
+            Position      [-40, 10]
             Direction     left
           }
           Schematic {
             Location      [349, 368; 1821, 1061]
             ZoomFactor    1.71498
-            SliderPosition [0, 10]
+            SliderPosition [0, 0]
             ShowBrowser   off
             BrowserWidth  100
-            Component {
-              Type          Constant
-              Name          "Constant"
-              Show          on
-              Position      [520, 185]
-              Direction     left
-              Flipped       off
-              Frame         [-25, -10; 25, 10]
-              LabelPosition [0, -13]
-              LabelAlign    down
-              Parameter {
-                Variable      "Value"
-                Value         "0.5"
-                Show          off
-              }
-              Parameter {
-                Variable      "DataType"
-                Value         "10"
-                Show          off
-              }
-            }
             Component {
               Type          SignalSwitch
               Name          "Switch"
@@ -1411,13 +1400,57 @@ Plecs {
                 }
               }
             }
-            Connection {
-              Type          Signal
-              SrcComponent  "Constant"
-              SrcTerminal   1
-              Points        [465, 185; 465, 125]
-              DstComponent  "Switch"
-              DstTerminal   2
+            Component {
+              Type          Input
+              Name          "DES_DUTY"
+              Show          on
+              Position      [545, 295]
+              Direction     up
+              Flipped       off
+              Parameter {
+                Variable      "Index"
+                Value         "3"
+                Show          on
+              }
+              Parameter {
+                Variable      "Width"
+                Value         "-1"
+                Show          off
+              }
+            }
+            Component {
+              Type          ManualSignalSwitch
+              Name          "Manual Switch (DBG)"
+              Show          on
+              Position      [540, 225]
+              Direction     up
+              Flipped       off
+              Parameter {
+                Variable      "SwitchState"
+                Value         "2"
+                Show          off
+              }
+            }
+            Component {
+              Type          Constant
+              Name          "Constant2"
+              Show          on
+              Position      [465, 260]
+              Direction     right
+              Flipped       off
+              Frame         [-15, -10; 15, 10]
+              LabelPosition [0, 13]
+              LabelAlign    up
+              Parameter {
+                Variable      "Value"
+                Value         "0.5"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "10"
+                Show          off
+              }
             }
             Connection {
               Type          Signal
@@ -1463,6 +1496,29 @@ Plecs {
                 DstComponent  "Scope"
                 DstTerminal   2
               }
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "DES_DUTY"
+              SrcTerminal   1
+              DstComponent  "Manual Switch (DBG)"
+              DstTerminal   3
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Constant2"
+              SrcTerminal   1
+              Points        [535, 260]
+              DstComponent  "Manual Switch (DBG)"
+              DstTerminal   2
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Manual Switch (DBG)"
+              SrcTerminal   1
+              Points        [540, 125]
+              DstComponent  "Switch"
+              DstTerminal   2
             }
           }
         }
@@ -1759,7 +1815,7 @@ Plecs {
               Flipped       off
               Parameter {
                 Variable      "SwitchState"
-                Value         "1"
+                Value         "2"
                 Show          off
               }
             }
@@ -1961,7 +2017,7 @@ Plecs {
           Type          Goto
           Name          "Goto"
           Show          off
-          Position      [365, 460]
+          Position      [380, 445]
           Direction     right
           Flipped       off
           Parameter {
@@ -1979,7 +2035,7 @@ Plecs {
           Type          Goto
           Name          "Goto1"
           Show          off
-          Position      [365, 475]
+          Position      [380, 475]
           Direction     right
           Flipped       off
           Parameter {
@@ -1997,7 +2053,7 @@ Plecs {
           Type          Goto
           Name          "Goto2"
           Show          off
-          Position      [365, 490]
+          Position      [380, 490]
           Direction     right
           Flipped       off
           Parameter {
@@ -2015,7 +2071,7 @@ Plecs {
           Type          Goto
           Name          "Goto3"
           Show          off
-          Position      [365, 505]
+          Position      [380, 505]
           Direction     right
           Flipped       off
           Parameter {
@@ -2128,6 +2184,42 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Goto
+          Name          "Goto4"
+          Show          off
+          Position      [380, 460]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Tag"
+            Value         "buck_duty"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From4"
+          Show          off
+          Position      [370, 145]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Tag"
+            Value         "buck_duty"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "1"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "Logical\nOperator"
@@ -2146,7 +2238,7 @@ Plecs {
           Type          Signal
           SrcComponent  "buck_duty"
           SrcTerminal   2
-          Points        [220, 130]
+          Points        [385, 130; 220, 130]
           Branch {
             DstComponent  "BuckPWM"
             DstTerminal   1
@@ -2164,7 +2256,7 @@ Plecs {
           Points        [160, 485]
           Branch {
             DstComponent  "State Machine"
-            DstTerminal   5
+            DstTerminal   6
           }
           Branch {
             Points        [160, 545]
@@ -2176,30 +2268,30 @@ Plecs {
           Type          Signal
           SrcComponent  "State Machine"
           SrcTerminal   1
-          Points        [340, 460]
+          Points        [340, 445]
           DstComponent  "Goto"
           DstTerminal   1
         }
         Connection {
           Type          Signal
           SrcComponent  "State Machine"
-          SrcTerminal   2
-          Points        [345, 480]
+          SrcTerminal   3
+          Points        [350, 485; 350, 475]
           DstComponent  "Goto1"
           DstTerminal   1
         }
         Connection {
           Type          Signal
           SrcComponent  "State Machine"
-          SrcTerminal   3
+          SrcTerminal   4
+          Points        [345, 495; 345, 490]
           DstComponent  "Goto2"
           DstTerminal   1
         }
         Connection {
           Type          Signal
           SrcComponent  "State Machine"
-          SrcTerminal   4
-          Points        [345, 500]
+          SrcTerminal   5
           DstComponent  "Goto3"
           DstTerminal   1
         }
@@ -2276,6 +2368,21 @@ Plecs {
               DstTerminal   5
             }
           }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "State Machine"
+          SrcTerminal   2
+          Points        [345, 475; 345, 460]
+          DstComponent  "Goto4"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From4"
+          SrcTerminal   1
+          DstComponent  "buck_duty"
+          DstTerminal   3
         }
         Annotation {
           Name          "Commands:\nTURN_ON_BUCK = 0x0001;\nTURN_ON_BRIDGE_DC="
@@ -2743,7 +2850,7 @@ Plecs {
       Position      [840, 495]
       Direction     up
       Flipped       off
-      Location      [640, 27; 2560, 1024]
+      Location      [2560, 23; 4480, 1020]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAFoAAADyvwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAPwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAZLAA"
 "ADnwAAAWgAAADw+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAA8oAAABmAP///wAAAAMAAA8AAAACAPw"
@@ -2772,7 +2879,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
