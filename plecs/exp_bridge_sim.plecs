@@ -61,11 +61,11 @@ Plecs {
   ScriptsDialogGeometry "[1084 579 1716 1084]"
   ScriptsDialogSplitterPos "90"
   Schematic {
-    Location      [0, 27; 2560, 1355]
-    ZoomFactor    2.58776
-    SliderPosition [266, 67]
+    Location      [0, 23; 960, 999]
+    ZoomFactor    1.00686
+    SliderPosition [-1, 0]
     ShowBrowser   on
-    BrowserWidth  84
+    BrowserWidth  102
     Component {
       Type          Inductor
       Name          "L1"
@@ -249,9 +249,11 @@ Plecs {
       CodeGenEnable on
       CodeGenSampleTime "50e-6"
       CodeGenDiscretizationMethod "2"
-      CodeGenInliningExceptions "AAAACwAAAAACAAAAPgBiAHIAaQBkAGcAZQBfAGQAdQB0A"
+      CodeGenInliningExceptions "AAAACwAAAAAEAAAAPgBiAHIAaQBkAGcAZQBfAGQAdQB0A"
 "HkALwBNAGEAbgB1AGEAbAAgAFMAdwBpAHQAYwBoACAAKABEAEIARwApAAAAKgBiAHIAaQBkAGcAZQ"
-"BfAGQAdQB0AHkALwBDAG8AbgBzAHQAYQBuAHQAMQ=="
+"BfAGQAdQB0AHkALwBDAG8AbgBzAHQAYQBuAHQAMQAAACwAYgByAGkAZABnAGUAXwBkAHUAdAB5AC8"
+"AQgBSAEQARwBQAFcATQBGAFIAUQAAADAAYgByAGkAZABnAGUAXwBkAHUAdAB5AC8AQgBSAEQARwBQ"
+"AFcATQBGAFIAUQBTAFc="
       CodeGenTarget "TI2837xS"
       CodeGenTargetSettings "AAAAfwAAAAAlUU1hcDxRU3RyaW5nLFFNYXA8UVN0cmluZyxRU"
 "3RyaW5nPiA+AAAAAAEAAAAQAFQASQAyADgAMwA3AHgAUwAAAA8AAAASAHUAcwBlAEkAbgB0AE8Acw"
@@ -261,9 +263,9 @@ Plecs {
 "QBTAGMAaQBQAGkAbgBzAAAADgBbADQAMwAsADQAMgBdAAAAIgBlAHgAdABNAG8AZABlAEIAdQBmAG"
 "YAZQByAFMAaQB6AGUAAAAIADEAMAAwADAAAAASAGUAeAB0AEMAbABrAE0ASAB6AAAABAAzADAAAAA"
 "IAGMAaABpAHAAAAACADEAAAAWAGIAdQBpAGwAZABDAG8AbgBmAGkAZwAAAAIAMgAAAAoAYgBvAGEA"
-"cgBkAAAAAgAyAAAAGgBUAEEAUgBHAEUAVABfAEQARQBWAEkAQwBFAAAAFgAwAHwAQwBPAE0AMQAwA"
-"HwAMAB8ADAAAAAiAEwAaQBuAGsAZQByAEMAbwBtAG0AYQBuAGQARgBpAGwAZQAAAAAAAAAaAEUAWA"
-"BUAEUAUgBOAEEATABfAE0ATwBEAEUAAAACADE="
+"cgBkAAAAAgAyAAAAGgBUAEEAUgBHAEUAVABfAEQARQBWAEkAQwBFAAAAFAAwAHwAQwBPAE0AOQB8A"
+"DAAfAAwAAAAIgBMAGkAbgBrAGUAcgBDAG8AbQBtAGEAbgBkAEYAaQBsAGUAAAAAAAAAGgBFAFgAVA"
+"BFAFIATgBBAEwAXwBNAE8ARABFAAAAAgAx"
       CodeGenFloatingPointFormat "1"
       ExternalModeSettings "AAAAfwAAAAAWUU1hcDxRU3RyaW5nLFFTdHJpbmc+AAAAAAcAAA"
 "AYAFQAcgBpAGcAZwBlAHIAVgBhAGwAdQBlAAAAAgAwAAAAGABUAHIAaQBnAGcAZQByAEQAZQBsAGE"
@@ -330,9 +332,9 @@ Plecs {
         Index         "6"
       }
       Schematic {
-        Location      [614, 144; 2315, 1161]
-        ZoomFactor    1.71498
-        SliderPosition [0, 50]
+        Location      [1, 29; 959, 998]
+        ZoomFactor    1.14436
+        SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
         Component {
@@ -466,18 +468,18 @@ Plecs {
           Flipped       off
           Location      [1103, 275; 1685, 780]
           State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
-"wBvAG0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
-"AA/////wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAA"
-"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAkYAAAHe"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAAAAAA"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAABIwAAAPF"
 "AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
 "AAAAAAAAA=="
           SavedViews    "AAAAAgAAAAA="
           HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJA"
-"AAAAgAAAGQAAAAFAAAAZAAAAAQAAABkAAAABwAAAGQAAAAGAAAAZAAAAAkAAABkAAAACAAAAGQAAA"
-"ABAAAAZAAAAAMAAABkAAAAogAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAB"
+"AAAAQAAAGQAAAACAAAAZAAAAAMAAABkAAAABAAAAGQAAAAFAAAAZAAAAAYAAABkAAAABwAAAGQAAA"
+"AIAAAAZAAAAAkAAABkAAAAxwAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAB"
 "+AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAA"
 "AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAA"
-"AAAAAAkAAAAAQAAAAAAAAPoAAAAACQ="
+"AAAAABJAAAAAQAAAAAAAAPoAAAAAEk="
           PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "QAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
           Axes          "2"
@@ -677,7 +679,7 @@ Plecs {
             Show          off
           }
           FSM {
-            Location       [513, 247; 2422, 1113]
+            Location       [513, 247; 3649, 1744]
             ZoomFactor     1
             SliderPosition [0, 0]
             FsmState {
@@ -722,30 +724,31 @@ Plecs {
             }
             FsmState {
               Name          "ONDC"
-              Position      [1110, 240]
+              Position      [1140, 210]
               Frame         [-100, -100; 100, 100]
               Parameter {
                 Name     "EnterAction"
-                Value    ""
+                Value    "des_duty=0.5;"
               }
               Parameter {
                 Name     "DuringAction"
                 Value    "buck_en=1;\nbridge_en=1;\nstate=3;\n\nif(((uint16_t)"
 "(cmd)&(uint16_t)(0x00FF))==0x0006){\n\tbuck_duty=(float)(((uint16_t)(cmd))>>8"
-")/256.0;\n}"
+")/256.0;\n}\n\nif(((uint16_t)(cmd)&(uint16_t)(0x00FF))==0x0005){\n\tdes_duty="
+"(float)(((uint16_t)(cmd))>>8)/256.0;\n}"
               }
               Parameter {
                 Name     "ExitAction"
-                Value    ""
+                Value    "des_duty=0.5;"
               }
             }
             FsmState {
               Name          "ONAC"
-              Position      [1130, 460]
-              Frame         [-110, -80; 110, 80]
+              Position      [1160, 530]
+              Frame         [-120, -100; 120, 100]
               Parameter {
                 Name     "EnterAction"
-                Value    "des_duty=0.5;"
+                Value    "des_duty=0.5;\ndes_freq=50e3;"
               }
               Parameter {
                 Name     "DuringAction"
@@ -1443,8 +1446,8 @@ Plecs {
             Direction     left
           }
           Schematic {
-            Location      [624, 274; 2003, 1063]
-            ZoomFactor    2.24589
+            Location      [1, 29; 959, 998]
+            ZoomFactor    1.49863
             SliderPosition [0, 0]
             ShowBrowser   off
             BrowserWidth  100
@@ -1623,23 +1626,24 @@ Plecs {
               Position      [50, 165]
               Direction     down
               Flipped       off
-              Location      [1383, 463; 2469, 1120]
+              Location      [542, 290; 1628, 947]
               State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQA"
-"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
-"AAAAAA/////wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAA"
-"AAAAAAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABD4A"
-"AAJ2AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
+"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
+"AAAAAA/////wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAA"
+"AAAAAAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAACHwA"
+"AAT1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
 "/8AAAAAAAAAAA=="
               SavedViews    "AAAAAgAAAAA="
               HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAA"
-"AAJAAAACAAAAMgAAAAJAAAAyAAAAAYAAADIAAAABwAAAMgAAAAEAAAAyAAAAAUAAADIAAAAAgAAAM"
-"gAAAADAAAAyAAAAAEAAADIAAAAygAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAs"
+"AAJAAAAAQAAAMgAAAACAAAAyAAAAAMAAADIAAAABAAAAMgAAAAFAAAAyAAAAAYAAADIAAAABwAAAM"
+"gAAAAIAAAAyAAAAAkAAADIAAAA7wAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAs"
 "AAACmAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAA"
 "AAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA"
-"QAAAAAAAAAkAAAAAQAAAAAAAAPoAAAAACQ="
-              PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              Axes          "1"
-              TimeRange     "0.0"
+"QAAAAAAAABJAAAAAQAAAAAAAAPoAAAAAEk="
+              PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"AAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+              Axes          "2"
+              TimeRange     "0"
               ScrollingMode "1"
               SingleTimeAxis "1"
               Open          "0"
@@ -1658,12 +1662,33 @@ Plecs {
                 KeepBaseline  off
                 BaselineValue 0
               }
+              Axis {
+                Name          ""
+                AutoScale     1
+                MinValue      0
+                MaxValue      1
+                Signals       {}
+                SignalTypes   [ ]
+                Untangle      0
+                KeepBaseline  off
+                BaselineValue 0
+              }
               Fourier {
                 SingleXAxis       on
                 AxisLabel         "Frequency"
                 Scaling           0
                 PhaseDisplay      0
                 ShowFourierLegend off
+                Axis {
+                  Name          ""
+                  AutoScale     1
+                  MinValue      0
+                  MaxValue      1
+                  Signals       {}
+                  Untangle      0
+                  KeepBaseline  off
+                  BaselineValue 0
+                }
                 Axis {
                   Name          ""
                   AutoScale     1
@@ -1787,6 +1812,40 @@ Plecs {
                 Show          off
               }
             }
+            Component {
+              Type          ManualSignalSwitch
+              Name          "BRDGPWMFRQSW"
+              Show          on
+              Position      [185, 220]
+              Direction     left
+              Flipped       off
+              Parameter {
+                Variable      "SwitchState"
+                Value         "1"
+                Show          off
+              }
+            }
+            Component {
+              Type          Constant
+              Name          "BRDGPWMFRQ"
+              Show          on
+              Position      [280, 215]
+              Direction     left
+              Flipped       off
+              Frame         [-15, -10; 15, 10]
+              LabelPosition [0, -13]
+              LabelAlign    down
+              Parameter {
+                Variable      "Value"
+                Value         "50e3"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "10"
+                Show          off
+              }
+            }
             Connection {
               Type          Signal
               SrcComponent  "zero"
@@ -1884,11 +1943,33 @@ Plecs {
             }
             Connection {
               Type          Signal
+              SrcComponent  "BRDGPWMFRQSW"
+              SrcTerminal   1
+              Points        [140, 220]
+              Branch {
+                DstComponent  "Gain"
+                DstTerminal   1
+              }
+              Branch {
+                Points        [140, 160]
+                DstComponent  "Scope"
+                DstTerminal   2
+              }
+            }
+            Connection {
+              Type          Signal
               SrcComponent  "DES_FREQ"
               SrcTerminal   1
-              Points        [240, 220]
-              DstComponent  "Gain"
-              DstTerminal   1
+              Points        [240, 225]
+              DstComponent  "BRDGPWMFRQSW"
+              DstTerminal   2
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "BRDGPWMFRQ"
+              SrcTerminal   1
+              DstComponent  "BRDGPWMFRQSW"
+              DstTerminal   3
             }
           }
         }
@@ -1899,20 +1980,20 @@ Plecs {
           Position      [205, 590]
           Direction     up
           Flipped       off
-          Location      [864, 301; 1618, 771]
+          Location      [114, 309; 868, 779]
           State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
-"wBvAG0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
-"AA/////wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAA"
-"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAvIAAAG7"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAAAAAA"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAABeQAAAN/"
 "AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
 "AAAAAAAAA=="
           SavedViews    "AAAAAgAAAAA="
           HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJA"
-"AAAAgAAAGQAAAAFAAAAZAAAAAQAAABkAAAABwAAAGQAAAAGAAAAZAAAAAkAAABkAAAACAAAAGQAAA"
-"ABAAAAZAAAAAMAAABkAAAAyQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAC"
+"AAAAQAAAGQAAAACAAAAZAAAAAMAAABkAAAABAAAAGQAAAAFAAAAZAAAAAYAAABkAAAABwAAAGQAAA"
+"AIAAAAZAAAAAkAAABkAAAA7gAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAC"
 "lAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAA"
 "AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAA"
-"AAAAAAkAAAAAQAAAAAAAAPoAAAAACQ="
+"AAAAABJAAAAAQAAAAAAAAPoAAAAAEk="
           PlotPalettes  "AAAAAQAAAAEAAAABAAAAAQAAAAEC//8u4P//zMwAAAAAAAEAAAABA"
 "AAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAEAAAABP/AAAAAAAAAAAAABAAAAAQAAAAABAAAAAQAAAA"
 "AAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
@@ -2185,7 +2266,7 @@ Plecs {
         Component {
           Type          Reference
           SrcComponent  "TIC2000_Lib/PWM (Variable)"
-          Name          "PWM (Variable)"
+          Name          "PWM (Variable) J8-80"
           Show          on
           Position      [110, 325]
           Direction     down
@@ -2210,7 +2291,7 @@ Plecs {
           }
           Parameter {
             Variable      "pwm_1"
-            Value         "1"
+            Value         "2"
             Show          off
           }
           Parameter {
@@ -2230,7 +2311,7 @@ Plecs {
           }
           Parameter {
             Variable      "delay"
-            Value         "0.1e-6"
+            Value         "0.2e-6"
             Show          off
           }
           Parameter {
@@ -2515,7 +2596,7 @@ Plecs {
           SrcComponent  "bridge_duty"
           SrcTerminal   2
           Points        [190, 325; 190, 335]
-          DstComponent  "PWM (Variable)"
+          DstComponent  "PWM (Variable) J8-80"
           DstTerminal   1
         }
         Connection {
@@ -2523,7 +2604,7 @@ Plecs {
           SrcComponent  "bridge_duty"
           SrcTerminal   4
           Points        [415, 315; 415, 285; 180, 285; 180, 325]
-          DstComponent  "PWM (Variable)"
+          DstComponent  "PWM (Variable) J8-80"
           DstTerminal   7
         }
         Connection {
@@ -2544,8 +2625,8 @@ Plecs {
         Annotation {
           Name          "Commands:\nTURN_ON_BUCK = 0x0001;\nTURN_ON_BRIDGE_DC="
 "0x0003;\nTURN_OFF=0x0002;\nTURN_ON_BRIDGE_AC=0x0004;\nSet DC duty: 0xXX05 whe"
-"re XX determines the duty\nSET_FREQ_AC=0xXXX7 where XX determines the frequen"
-"cy"
+"re XX determines the duty\nSet Buck duty: 0xXX06 where XX determines the duty"
+"\nSET_FREQ_AC=0xXXX7 where XX determines the frequency"
           Position      [710, 65]
         } 
       }
@@ -2567,12 +2648,12 @@ Plecs {
       Type          CScript
       Name          "DC Test"
       Show          on
-      Position      [705, 370]
+      Position      [730, 370]
       Direction     down
       Flipped       off
       Parameter {
         Variable      "DialogGeometry"
-        Value         "[788 344 1622 935]"
+        Value         "[30 386 1286 1494]"
         Show          off
       }
       Parameter {
@@ -2642,13 +2723,13 @@ Plecs {
       }
       Parameter {
         Variable      "OutputFcn"
-        Value         "if((CurrentTime>1)&&(CurrentTime<2))\n"
+        Value         "if((CurrentTime>0.5)&&(CurrentTime<1))\n"
 "\tOutputSignal(0,0)=0x0001;\t//enable the buck\n"
-"else if((CurrentTime>2)&&(CurrentTime<3))\n"
-"\tOutputSignal(0,0)=0x0003;\t//go into ONAC state and set duty to 128 -> 0.5"
+"else if((CurrentTime>1)&&(CurrentTime<1.5))\n"
+"\tOutputSignal(0,0)=0x0003;\t//go into ONDC state and set duty to 128 -> 0.5"
 "\n"
-"else if((CurrentTime>3)&&(CurrentTime<4))\n"
-"\tOutputSignal(0,0)=0xC805;\t//go into ONAC state and set duty to 200 -> 0.78"
+"else if((CurrentTime>1.5)&&(CurrentTime<2))\n"
+"\tOutputSignal(0,0)=0xC805;\t//go into ONDC state and set duty to 200 -> 0.78"
 "\n"
 "else\n"
 "\tOutputSignal(0,0)=0x00;"
@@ -3008,22 +3089,23 @@ Plecs {
       Position      [840, 495]
       Direction     up
       Flipped       off
-      Location      [2560, 23; 4480, 1020]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAFoAAADL/wCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAPwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAZLAA"
-"ADnwAAAWgAAADw+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAy8AAABmAP///wAAAAMAAAeAAAAAl/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABQAP///wAABhQAAAMvAAAA"
+      Location      [861, 64; 1857, 976]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAFoAAAG8/wCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAgoA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAZLAA"
+"ADnwAAAWgAAADw+wAAAAwAVAByAGEAYwBlAHMBAAAAUgAABvMAAADKAP///wAAAAMAAAfIAAAAtPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB8gAAACYAP///wAABlgAAAbzAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxAAAAAAAAA"
 "ABAFAAAAAAAAAAAAAcAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/"
 "gAAAAAAAAAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAA"
 "Af/gAAAAAAAB/+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL+AIAAAAGAAAAA"
-"wAAAMgAAAAEAAAAyAAAAAUAAADIAAAABgAAAMgAAAAHAAAAyAAAAAkAAADIAAAHbwAAAAsBAAABAA"
-"AAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAC1AAAAAQAAAAAAAADIAAAAAQAAAAAAAADIAAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
+"QAAAMgAAAACAAAAyAAAAAMAAADIAAAABAAAAMgAAAAFAAAAyAAAAAYAAADIAAAABwAAAMgAAAAIAA"
+"AAyAAAAAkAAADIAAAA/gAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAC1AAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAADIAAAAAQAAAAAAAAAAAAAAAQAAAAAAAARiAAAAAQAAAAAAAAPoAAAAACQ="
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"ABJAAAAAQAAAAAAAAPoAAAAAEk="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAQAAAAEB/////wAAAAAAAAAAAAEAAAABAQAAA"
 "AEAAAABAAAAAQAAAAEAAAABAAAAAAEAAAABP/AAAAAAAAAAAAABAAAAAQAAAAABAAAAAQAAAAEAAA"
 "ABAf//AACqqv//AAAAAAABAAAAAQEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAABAAAAAT/wAAAAAAA"
@@ -3040,7 +3122,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
@@ -3266,18 +3348,18 @@ Plecs {
       Flipped       off
       Location      [326, 188; 1310, 860]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAA9gAAAKFAAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAATgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAMoA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAADKAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAACYAP///wAAB7AAAAUTAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
-"AAAAMgAAAAJAAAAyAAAAAYAAADIAAAABwAAAMgAAAAEAAAAyAAAAAUAAADIAAAAAgAAAMgAAAADAA"
-"AAyAAAAAEAAADIAAABRgAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAEiAAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
+"QAAAMgAAAACAAAAyAAAAAMAAADIAAAABAAAAMgAAAAFAAAAyAAAAAYAAADIAAAABwAAAMgAAAAIAA"
+"AAyAAAAAkAAADIAAABawAAAAsBAAABAAAAAAAAAAAAAAAAyP////8AAACBAAAAAAAAAAsAAAEiAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AAkAAAAAQAAAAAAAAPoAAAAACQ="
+"ABJAAAAAQAAAAAAAAPoAAAAAEk="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -3763,44 +3845,10 @@ Plecs {
       }
     }
     Component {
-      Type          Switch
-      Name          "S1"
-      Show          on
-      Position      [705, 175]
-      Direction     left
-      Flipped       off
-      Parameter {
-        Variable      "s_init"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Constant
-      Name          "cbypass"
-      Show          on
-      Position      [675, 140]
-      Direction     right
-      Flipped       off
-      Frame         [-10, -10; 10, 10]
-      LabelPosition [0, 13]
-      LabelAlign    up
-      Parameter {
-        Variable      "Value"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
       Type          CScript
       Name          "AC Test"
       Show          on
-      Position      [705, 420]
+      Position      [730, 420]
       Direction     down
       Flipped       off
       Parameter {
@@ -3910,6 +3958,32 @@ Plecs {
       Parameter {
         Variable      "RestoreCustomStateFcn"
         Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          ManualSwitch
+      Name          "S1"
+      Show          on
+      Position      [705, 175]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "s"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          ManualSignalSwitch
+      Name          "Manual Switch"
+      Show          on
+      Position      [645, 400]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "SwitchState"
+        Value         "1"
         Show          off
       }
     }
@@ -4335,14 +4409,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "cbypass"
-      SrcTerminal   1
-      Points        [705, 140]
-      DstComponent  "S1"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Controller"
       SrcTerminal   7
       Points        [365, 440; 365, 420; 275, 420; 275, 410]
@@ -4410,21 +4476,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "AC Test"
-      SrcTerminal   2
-      Points        [620, 420; 620, 400; 585, 400]
-      Branch {
-        DstComponent  "Controller"
-        DstTerminal   2
-      }
-      Branch {
-        Points        [585, 555]
-        DstComponent  "Scope1"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Demux3"
       SrcTerminal   6
       Points        [780, 510; 780, 515]
@@ -4438,6 +4489,37 @@ Plecs {
       Points        [775, 520; 775, 525]
       DstComponent  "Scope"
       DstTerminal   7
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Manual Switch"
+      SrcTerminal   1
+      Points        [585, 400]
+      Branch {
+        DstComponent  "Controller"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [585, 555]
+        DstComponent  "Scope1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "AC Test"
+      SrcTerminal   2
+      Points        [685, 420; 685, 405]
+      DstComponent  "Manual Switch"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "DC Test"
+      SrcTerminal   2
+      Points        [685, 370; 685, 395]
+      DstComponent  "Manual Switch"
+      DstTerminal   3
     }
     Annotation {
       Name          "Synchronous buck converter"
